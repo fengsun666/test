@@ -263,3 +263,21 @@ step：步长，默认为1。
 [1, 5, 9]
 ```
 
+带条件筛选功能的列表推导式：   ==还没掌握==
+
+```python
+[expression for target in iterable if condition1]
+# 多层嵌套
+[expression for target1 in iterable1
+            for target2 in iterable2
+            ...
+            for targetN in iterableN]
+# 多层嵌套 + if
+[expression for target1 in iterable1 if condition1
+            for target2 in iterable2 if condition2
+            ...
+            for targetN in iterableN if conditionN]
+```
+
+
+
