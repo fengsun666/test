@@ -234,3 +234,32 @@ stop: 计数到 stop 结束，但不包括 stop。
 
 step：步长，默认为1。
 
+#### 列表推导式
+
+```python
+# for循环
+>>> oho = [1, 2, 3, 4, 5]
+>>> for i in range(len(oho)):
+...     oho[i] = oho[i] * 2
+# 列表推导式
+>>> oho = [1, 2, 3, 4, 5]
+>>> oho = [i * 2 for i in oho]
+# 基本语法：[expression for target in iterable] 先迭代在放入表达式最后存入列表
+```
+
+列表推导式处理矩阵：
+
+```python
+>>> matrix = [[1, 2, 3],
+...           [4, 5, 6],
+...           [7, 8, 9]]
+# 取矩阵第二列元素
+>>> col2 = [row[1] for row in matrix]
+>>> col2
+[2, 5, 8]
+# 取矩阵主对角线元素
+>>> diag = [matrix[i][i] for i in range(len(matrix))]
+>>> diag
+[1, 5, 9]
+```
+
